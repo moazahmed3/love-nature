@@ -1,0 +1,350 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #ffd936;
+  --hover-color: #dab200;
+  --text-color: #536942;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+/* ============================ start nav =============================== */
+.nav {
+  position: fixed;
+  background-color: #836d45;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.inner-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo{
+    transition: .3s;
+}
+.nav-logo img {
+  width: 60px;
+  height: 60px;
+}
+.nav-logo:hover{
+    opacity: .3;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+.nav-list ul {
+  display: flex;
+}
+.nav-list ul li {
+  margin-left: 10px;
+}
+.nav-list ul li a {
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 18px;
+  transition: 0.3s;
+  position: relative;
+}
+.nav-list ul li a::after {
+  content: "";
+  background: #fff;
+  /* width: 100%; */
+  width: 0;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transition: 0.3s;
+}
+.nav-list ul li a:hover {
+  color: var(--hover-color);
+}
+.nav-list ul li a:hover::after {
+  width: 100%;
+}
+.nav-list .btn {
+  border: 1px solid #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: 30px;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.nav-list .btn:hover {
+  background-color: #fff;
+  color: #836d45;
+}
+/* ============================ end nav =============================== */
+/* ============================ start hero =============================== */
+.hero {
+  background-image: url("../img/header-hero.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.hero .overlay {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3));
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.hero .hero-content h2 {
+  font-size: 50px;
+}
+.hero .hero-content h1 {
+  font-size: 117px;
+}
+
+.hero .hero-content p {
+  margin: 15px 0;
+  word-spacing: 2px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+.hero .hero-content a {
+  color: #536942;
+  text-transform: capitalize;
+  background-color: var(--main-color);
+  padding: 14px 44px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-top: 10px;
+  transition: 0.3s;
+  margin-left: 20px;
+}
+.hero .hero-content a:hover {
+  background-color: var(--hover-color);
+}
+/* ============================ end hero =============================== */
+/* ============================ start services =============================== */
+
+.services {
+  margin-top: 70px;
+}
+.container {
+  width: 76%;
+  margin: auto;
+}
+.content-services h2 {
+  color: var(--text-color);
+  font-size: 42px;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+}
+.content-services h2::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 50%;
+  bottom: -25px;
+  transform: translate(-50%);
+}
+
+.services .cards {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services .cards .inner-card {
+  padding: 15px;
+}
+.inner-card .content-card {
+  padding: 20px 10px;
+}
+.inner-card .content-card h3 {
+  font-size: 22px;
+  color: var(--text-color);
+  font-weight: 500;
+}
+.inner-card .content-card p {
+  color: rgba(82, 104, 64, 0.75);
+  word-spacing: 2px;
+  line-height: 1.6;
+  font-size: 17px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+/* ============================ end services =============================== */
+/* ============================ start teams =============================== */
+.teams {
+  background-color: #f6f8f5;
+  margin-top: 50px;
+}
+.teams .content-team {
+  padding: 80px;
+  text-align: center;
+}
+.teams .content-team > img {
+  width: 37px;
+  height: 37px;
+  opacity: 0.3;
+  margin: auto;
+}
+.teams .content-team p {
+  font-size: 35px;
+  color: var(--text-color);
+  max-width: 75%;
+  margin: 25px auto;
+  font-weight: lighter;
+}
+.content-team .team {
+  margin-top: 50px;
+}
+.content-team .team img {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+.content-team .team h4 {
+  color: var(--text-color);
+  font-weight: 300;
+  margin-top: 10px;
+}
+/* ============================ end teams =============================== */
+/* ============================ start about =============================== */
+.about {
+  margin-top: 70px;
+}
+.about .inner-about {
+  display: flex;
+  justify-content: space-between;
+}
+.about .inner-about .content-about {
+  padding: 10px 250px 10px 25px;
+  width: 60%;
+}
+.about .inner-about .about-img {
+  width: 38%;
+}
+
+.about .inner-about .content-about h6 {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgba(83, 105, 65, 0.7);
+}
+.about .inner-about .content-about h3 {
+  font-size: 35px;
+  color: var(--text-color);
+  margin: 20px 0;
+  font-weight: 300;
+}
+.about .inner-about .content-about p {
+  line-height: 1.5;
+  color: rgba(83, 105, 65, 0.7);
+}
+.about .inner-about .content-about a {
+  padding: 16px 38px;
+  background: transparent;
+  color: rgba(83, 105, 65, 0.7);
+  border: #536942 1px solid;
+  border-radius: 5px;
+  margin-top: 35px;
+  transition: 0.3s;
+  text-transform: capitalize;
+}
+.about .inner-about .content-about a:hover {
+  color: #9fce00;
+  border: #9fce00 1px solid;
+}
+.about .inner-about .about-img img {
+  border-radius: 5px;
+}
+/* ============================ end about =============================== */
+/* ============================ start QUESTIONS =============================== */
+.question {
+  margin-top: 70px;
+  background-image: url("../img/footer-hero-big.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.content-question {
+  text-align: center;
+  padding: 110px 150px;
+}
+.content-question h3 {
+  font-size: 50px;
+  color: var(--text-color);
+}
+.content-question p {
+  color: var(--text-color);
+  margin-top: 35px;
+  margin-bottom: 35px;
+  line-height: 1.5;
+  font-size: 18px;
+  word-spacing: 2px;
+}
+.content-question a {
+  color: #536942;
+  text-transform: capitalize;
+  background-color: var(--main-color);
+  padding: 14px 44px;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+.content-question a:hover {
+  background-color: var(--hover-color);
+}
+/* ============================ end QUESTIONS =============================== */
+/* ============================ start footer =============================== */
+.footer {
+  padding: 30px;
+}
+.content-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-footer .nav-list-footer {
+  display: flex;
+}
+.content-footer .nav-list-footer li {
+  margin-right: 10px;
+}
+
+.content-footer .nav-list-footer li a {
+  color: rgb(83, 105, 66);
+  font-size: 18px;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+.content-footer .nav-list-footer li a:hover {
+  color: var(--hover-color);
+}
+.content-footer .logo img {
+  width: 60px;
+  height: 60px;
+}
+.content-footer p {
+  color: rgb(83, 105, 66);
+  font-size: 18px;
+}
